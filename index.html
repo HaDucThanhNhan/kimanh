@@ -7,10 +7,27 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
 </head>
-<body style="background-image: url('./bg-img.jpg')">
-    <p style="font-size: 30px; text-align: center; font-weight: bold; color: green;">ĐÂY LÀ ẢNH VỢ TƯƠNG LAI CỦA TUI!!!!</p>
-    <div style="display: flex;justify-content: center;">
-        <img id="img" src="./img.jpg" alt="">
+<script>
+    var isHide = false;
+    function hide(){
+      var main =  document.getElementById("main");
+      isHide = !isHide;
+      if(isHide == false){
+          main.style.display= "none";
+      } else {
+        main.style.display= "block";
+      }
+    }
+</script>
+<body style="padding: 0; margin: 0; display: flex; flex-direction: column;">
+    <div style="display: flex; justify-content: center; background: chocolate; height:40px;">
+        <button onClick="hide()">Click vào đây nè</button>
+    </div>
+    <div id="main" style="background-image: url('./bg-img.jpg');display: none; height:100%;">
+        <p class="scale-up-center" style="font-size: 30px; text-align: center; font-weight: bold; color: green;">ĐÂY LÀ ẢNH VỢ TƯƠNG LAI CỦA TUI!!!!</p>
+        <div style="display: flex;justify-content: center;">
+            <img class="scale-up-center2" id="img" src="./img.jpg" alt="">
+        </div>
     </div>
 </body>
 </html>
